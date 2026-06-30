@@ -1,0 +1,171 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f4f0;
+  color: #1a1a2e;
+}
+
+/* Page wrapper */
+.page {
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+/* Two column layout */
+.main-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Left panel */
+.left-panel {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+/* Hero section */
+.secure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8f5e9;
+  color: #1a5c38;
+  border: 1.5px solid #1a5c38;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-green {
+  color: #1a5c38;
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Right panel */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Form card */
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #1a5c38;
+}
+
+.form-title {
+  font-size: 22px;
+  color: #1a5c38;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f4f0;
+}
+
+/* Form fields */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d5a3d;
+}
+
+.field select,
+.field input {
+  padding: 10px 14px;
+  border: 1.5px solid #c8d8c8;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1a1a2e;
+  background: #f9fbf9;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field select:focus,
+.field input:focus {
+  border-color: #1a5c38;
+  background: white;
+}
+
+.field select:disabled {
+  background: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Search button */
+button {
+  margin-top: 8px;
+  padding: 12px 28px;
+  background-color: #1a5c38;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+button:hover:not(:disabled) {
+  background-color: #c9a84c;
+  color: #1a1a2e;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* ── Error message ── */
+.error-message {
+  background: #fff3f3;
+  border: 1.5px solid #e74c3c;
+  color: #c0392b;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+}

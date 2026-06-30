@@ -1,0 +1,102 @@
+.stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+}
+
+/* each step row */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  /* flex-shrink: 0; */
+}
+
+.step-label {
+  font-size: 14px;
+}
+
+/* inactive */
+.step.inactive .step-circle {
+  background-color: #e0e0e0;
+  color: #999;
+}
+.step.inactive .step-label {
+  color: #999;
+}
+
+/* active */
+.step.active .step-circle {
+  background-color: greenyellow;
+  color: green;
+  font-weight: bold;
+}
+.step.active .step-label {
+  color: black;
+  font-weight: bold;
+}
+
+/* completed */
+.step.completed .step-circle {
+  background-color: rgba(2, 94, 22, 0.854);
+  color: white;
+}
+.step.completed .step-label {
+  color: #2ecc71;
+}
+
+/* checkmark */
+.step.checkmark .step-circle {
+  background-color: #2ecc71;
+  color: white;
+}
+.step.checkmark .step-label {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* ── Reset & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f4f0;
+  color: #1a1a2e;
+}
+
+/* ── Stepper connector line ── */
+.step:not(:last-child) .step-circle::after {
+  content: '';
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 24px;
+  background-color: rgb(6, 103, 6);
+}
+
+.step {
+  position: relative;
+}
+
+.step-circle {
+  position: relative;
+}
+
